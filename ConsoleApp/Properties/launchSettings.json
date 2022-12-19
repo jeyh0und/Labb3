@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VocConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "-practice vegetables"
+    }
+  }
+}
