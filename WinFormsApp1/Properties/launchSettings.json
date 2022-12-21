@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "VocConsoleApp": {
+    "WinFormsApp1": {
       "commandName": "Project",
-      "commandLineArgs": "-add djur3"
+      "commandLineArgs": "-add djur2"
     }
   }
 }

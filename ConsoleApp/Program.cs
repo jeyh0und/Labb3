@@ -126,7 +126,7 @@ void addNewWord(string[] args)
                     words[i] = userInput;
                 }
             }
-            wordList.Add(words);
+            if (go) wordList.Add(words);
         }
         wordList.Save();
         Console.WriteLine("New words have been added!");
@@ -195,8 +195,18 @@ int LanguageIndex(WordList wordList)
 
 void sortedWordList(string[] args)
 {
+    if (args.Length == 2)
+    {
+        WordList wordList = WordList.LoadList(args[1]);
+        foreach (var item in wordList.Languages)
+        {
+            Console.Write(item.PadRight(20).ToUpper());
+        }
+        Console.WriteLine();
+        wordList.List(0, ShowTranslations);
 
-    if (args.Length == 3)
+    }
+    else if (args.Length == 3)
     {
         WordList wordList = WordList.LoadList(args[1]);
         int langIndex = 0;

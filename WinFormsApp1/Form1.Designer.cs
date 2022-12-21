@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.addWordBtn = new System.Windows.Forms.Button();
@@ -46,6 +46,7 @@
             this.listFilesBox = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.fromLanguageLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toLanguageLable = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
@@ -87,7 +88,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1023, 442);
+            this.tabPage1.Size = new System.Drawing.Size(1041, 471);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -227,14 +228,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeight = 32;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
             this.dataGridView1.Location = new System.Drawing.Point(6, 21);
             this.dataGridView1.MultiSelect = false;
@@ -249,6 +250,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.fromLanguageLabel);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.toLanguageLable);
             this.tabPage2.Controls.Add(this.exitBtn);
@@ -263,6 +265,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // fromLanguageLabel
+            // 
+            this.fromLanguageLabel.AutoSize = true;
+            this.fromLanguageLabel.Location = new System.Drawing.Point(278, 71);
+            this.fromLanguageLabel.Name = "fromLanguageLabel";
+            this.fromLanguageLabel.Size = new System.Drawing.Size(43, 20);
+            this.fromLanguageLabel.TabIndex = 7;
+            this.fromLanguageLabel.Text = "From";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -275,7 +286,7 @@
             // toLanguageLable
             // 
             this.toLanguageLable.AutoSize = true;
-            this.toLanguageLable.Location = new System.Drawing.Point(453, 83);
+            this.toLanguageLable.Location = new System.Drawing.Point(619, 71);
             this.toLanguageLable.Name = "toLanguageLable";
             this.toLanguageLable.Size = new System.Drawing.Size(25, 20);
             this.toLanguageLable.TabIndex = 5;
@@ -311,6 +322,7 @@
             // 
             // fromLanguageTxtBox
             // 
+            this.fromLanguageTxtBox.Enabled = false;
             this.fromLanguageTxtBox.Location = new System.Drawing.Point(221, 118);
             this.fromLanguageTxtBox.Name = "fromLanguageTxtBox";
             this.fromLanguageTxtBox.Size = new System.Drawing.Size(125, 27);
@@ -361,5 +373,6 @@
         private Button nxtBtn;
         private TextBox toLanguageTxtBox;
         private TextBox fromLanguageTxtBox;
+        private Label fromLanguageLabel;
     }
 }

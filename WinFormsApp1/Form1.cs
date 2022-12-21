@@ -137,39 +137,43 @@ namespace WinFormsApp1
             BeginPractice();
         }
 
+        private void nextWord()
+        {
+            toLanguageTxtBox.Text = String.Empty;
+            exitBtn.Enabled = true;
+            nxtBtn.Enabled = true;
+            if (toLanguageTxtBox.Text == practice.Translations[practice.ToLanguage])
+            {
+                label2.Text = "Correct!";
+                tries++;
+                rightAnsw++;
+            }
+            else
+            {
+                label2.Text = "Wrong!";
+                tries++;
+            }
+            BeginPractice();
+        }
         private void toLanguageTxtBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                exitBtn.Enabled = true;
-                nxtBtn.Enabled = true;
-                if (toLanguageTxtBox.Text == practice.Translations[1])
-                {
-                    label2.Text = "Correct!";
-                    tries++;
-                    rightAnsw++;
-                }
-                else
-                {
-                    label2.Text = "Wrong!";
-                    tries++;
-                }
+                nextWord();
             }
         }
 
         private void nxtBtn_Click(object sender, EventArgs e)
         {
-            toLanguageTxtBox.Text = String.Empty;
-            label2.Visible = false;
-            nxtBtn.Enabled = false;
-            BeginPractice();
+            nextWord();
         }
 
         void BeginPractice()
         {
             practice = thisFile.GetWordToPractice();
-            fromLanguageTxtBox.Text = $"{practice}";
+            fromLanguageLabel.Text = $"From {thisFile.Languages[practice.FromLanguage]}";
             toLanguageLable.Text = $"To {thisFile.Languages[practice.ToLanguage]}";
+            fromLanguageTxtBox.Text = practice.Translations[practice.FromLanguage];
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

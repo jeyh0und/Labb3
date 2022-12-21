@@ -59,7 +59,7 @@
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             string pathFile = Path.Combine(path, "Labb3", Name + ".dat");
-            DirectoryInfo directoryInfo = new DirectoryInfo(pathFile); 
+            //DirectoryInfo directoryInfo = new DirectoryInfo(pathFile);
             /*if (!directoryInfo.Exists)
             {
                 directoryInfo.Create();
