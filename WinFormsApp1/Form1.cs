@@ -9,8 +9,8 @@ namespace WinFormsApp1
         public WordList thisFile = null;
         public Word practice = null;
         string file = string.Empty;
-        private int tries;
-        private int rightAnsw;
+        private float tries;
+        private float rightAnsw;
         private float correctPerc;
         private int languageCount = 0;
         static string localAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
@@ -139,7 +139,6 @@ namespace WinFormsApp1
 
         private void nextWord()
         {
-            toLanguageTxtBox.Text = String.Empty;
             exitBtn.Enabled = true;
             nxtBtn.Enabled = true;
             if (toLanguageTxtBox.Text == practice.Translations[practice.ToLanguage])
